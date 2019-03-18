@@ -2,7 +2,7 @@ type.mlva <- function(genome,start,end,motif)
 {
   nhit <- numeric()
 
-  for(i in 1:30)
+  for(i in 1:40)
   {
     sequence.to.search <- paste0(start,paste(rep(motif,i),collapse = ''),end)
     mycount <- vcountPattern(pattern = sequence.to.search,subject = genome,max.mismatch = 0)
