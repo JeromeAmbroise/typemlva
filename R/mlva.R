@@ -1,7 +1,16 @@
 
-
-
-
+#' typemlva enables to compute the mlva profile of an isolate based on the genome
+#'
+#' You provide both a genome and the motifs. The function computes the number of repetition for each motif
+#'
+#' @param genome the reference genome that you want to screen
+#' @param motifs a list with each motif
+#' @param kmer the kmer size which was used during genome assembly
+#'
+#' @return a characther with the MLVA profile
+#' @import Biostrings
+#'
+#' @export
 typemlva <- function(genome,motifs,kmer)
 {
   library(Biostrings)
@@ -15,7 +24,18 @@ typemlva <- function(genome,motifs,kmer)
   return(profile)
 }
 
-
+#' type1motif enables to compute the number of motif for a single VNTR locus
+#'
+#' You provide both a genome and the motif. The function computes the number of repetition for this motif
+#'
+#' @param genome the reference genome that you want to screen
+#' @param motifs the sequence of the motif
+#' @param kmer the kmer size which was used during genome assembly
+#'
+#' @return the number of repetitions
+#' @import Biostrings
+#'
+#' @export
 type1motif <- function(genome,motif,kmer)
 {
 
