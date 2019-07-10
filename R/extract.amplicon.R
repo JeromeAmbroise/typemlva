@@ -68,6 +68,6 @@ extract.amplicon.multiple.sequence <- function(target,Fprobe,Rprobe,max.mismatch
   library(Biostrings)
   subsequence <- DNAStringSet()
   for(i in 1:length(target))
-  {subsequence <- c(subsequence,extract.amplicon.one.sequence(target=target[i],Fprobe='TGACTACTGAAACAGTTTTTG',Rprobe='ATGATTGTACCGAGTAAAAGA',max.mismatch=1))}
+  {subsequence <- c(subsequence,extract.amplicon.one.sequence(target=target[i],Fprobe=Fprobe,Rprobe=Rprobe,max.mismatch=max.mismatch))}
   return(subsequence)
 }
